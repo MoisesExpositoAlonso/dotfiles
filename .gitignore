@@ -1,0 +1,20 @@
+
+# Folders that I usually create
+figures_png/
+logs/
+tables/
+results/
+plots/
+
+
+# job runs and stuff like that
+shjob*
+*.log
+run*
+trial*
+
+# Anoying files
+.DS_Store
+.nfs*
+*~
+*swp
