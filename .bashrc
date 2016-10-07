@@ -77,6 +77,21 @@ export PATH=~/ebio/abt6/mexposito/softwares/R-3.2.0/bin/:$PATH
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+
+# to get installed rgdal, you need libraries proj4 and gdal, follow this web to install http://wanwanliang.net/install%20proj4%20gdal%20and%20rgdal.html
+# instead of running the r install commmand that they say, run this:
+# install.packages('~/softwares/rgdal_1.1-10.tar.gz',repos=NULL,type="source",configure.args=c('--with-proj-include=/ebio/abt6/mexposito/softwares/proj4/include', '--with-proj-lib=/ebio/abt6/mexposito/softwares/proj4/lib'))
+export PATH=$PATH:/ebio/abt6/mexposito/softwares/proj4/bin 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/ebio/abt6/mexposito/softwares/proj4/lib
+
+export PATH=$PATH:/ebio/abt6/mexposito/softwares/gdal/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/ebio/abt6/mexposito/softwares/gdal/lib
+export GDAL_DATA=/ebio/abt6/mexposito/softwares/gdal/share/gdal
+
+export R_LIBS=/ebio/abt6/mexposito/softwares/R-3.2.0/library
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/softwares/lib
+# all this shit to get rgdal to work ...
+
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
