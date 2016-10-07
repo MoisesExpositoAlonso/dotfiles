@@ -44,6 +44,7 @@ alias sl='screen -ls'
 alias sr='screen -r'
 
 # git stuff
+alias bfg="java -jar ~/ebio/abt6/mexposito/softwares/bfg-1.12.13.jar"
 alias gsall="git ls-tree -r master --name-status"
 alias gdco='git log --oneline --decorate'
 alias gbra='git branch'
@@ -54,7 +55,7 @@ alias gs="git status"
 alias gr="git checkout"
 alias ga="git add"
 alias gl="git lola"
-
+alias glfs="git lfs track"
 # This is needed for git log to work. http://stackoverflow.com/questions/12328791/why-git-log-is-empty-even-if-log-file-exists
 export PAGER=/usr/bin/more
 
