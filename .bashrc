@@ -12,7 +12,7 @@ alias burrito='ssh mexposito@burrito'
 alias qq='q-charge --no-joblist'
 alias ll='ls -la'
 alias llh='ls -lah'
-alias descomp='tar -zcvf'
+alias untar='tar -zcvf'
 
 
 #aliases bur directories
