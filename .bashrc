@@ -12,8 +12,7 @@ alias burrito='ssh mexposito@burrito'
 alias qq='q-charge --no-joblist'
 alias ll='ls -la'
 alias llh='ls -lah'
-alias untar='tar -zcvf'
-
+alias untar='tar -xzf'
 
 #aliases bur directories
 alias solexa='cd ~/ebio/abt6_projects8/solexa_tools'
@@ -52,7 +51,6 @@ alias gc='git commit -m'
 alias gmer='git merge remote'
 alias ga='git add'
 alias gs="git status"
-alias gc="git commit"
 alias gr="git checkout"
 alias ga="git add"
 alias gl="git lola"
