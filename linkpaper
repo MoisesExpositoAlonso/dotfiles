@@ -1,0 +1,31 @@
+#!/bin/bash
+# This script links the PDF paper from your GoogleDrive/Paperpile folder and puts it from the folder you call the script.
+# It is useful for offline use of the papers saved in your Paperpile library.
+# NOTE: Of course, you need to have a GoogleDrive folder synchronized in your computer. Also, if your GoogleDrive folder
+# has a space, that is "Google Drive", substitute in the command below "GoogleDrive" for "Google\ Drive"
+
+
+# Returns error if you did not provide any argument
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied. You do not want to link all pdfs from Paperpile!"
+    exit 1
+    
+fi
+
+### Parse search arguments
+
+concatenate="*"
+folder="_"
+for i in "$@"
+do 
+concatenate=$concatenate"$i""*"
+folder=$folder"$i""_"
+done
+
+echo $concatenate".pdf"
+
+### find and link all paper
+
+find ~/GoogleDrive/Paperpile/All\ Papers/ -name "$concatenate" -exec ln -s {} \;
+
