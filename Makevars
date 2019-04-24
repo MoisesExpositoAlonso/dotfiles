@@ -1,0 +1,63 @@
+CC=clang
+CXX=clang++
+CXXFLAGS+= -g -w -Wno-ignored-attributes -Wno-unused-pragmas
+CXX11FLAGS+=-g  -w -Wno-ignored-attributes -Wno-unused-pragmas
+CXX14FLAGS+=-g  -w -Wno-ignored-attributes -Wno-unused-pragmas
+
+# https://github.com/RcppCore/Rcpp/issues/843
+# https://github.com/vinecopulib/rvinecopulib/issues/135
+
+### edd 03 Mar 2009                 emacs please make this a -*- mode: Makefile; -*-
+#
+#PEDANTIC=-pedantic -Werror
+#PEDANTIC=
+#
+#XTRAFLAGS=-Wno-misleading-indentation -Wno-unused -Wno-ignored-attributes -Wno-deprecated-declarations
+##XTRAFLAGS=
+#
+### for C code
+#CFLAGS=               -g -O3 -Wall -pipe $(PEDANTIC) $(XTRAFLAGS) -std=gnu99 -march=native
+#
+### for C++ and C++11 code
+#CXXFLAGS=            	-g -O3 -Wall -pipe $(PEDANTIC) $(XTRAFLAGS) -march=native
+#CXX1XFLAGS=		-g -O3 -Wall -pipe $(PEDANTIC) $(XTRAFLAGS) -march=native
+#CXX11FLAGS=		-g -O3 -Wall -pipe $(PEDANTIC) $(XTRAFLAGS) -march=native
+#CXX14FLAGS=		-g -O3 -Wall -pipe $(PEDANTIC) $(XTRAFLAGS) -march=native
+#
+#FLAGS=-Wall -O3
+#
+### for Fortran code
+#FFLAGS=-O3 -g0 -Wall -pipe
+### for Fortran 95 code
+#FCFLAGS=-O3 -g0 -Wall -pipe
+#
+##VER=-4.9
+#VER=
+#CCACHE=ccache
+#CC=$(CCACHE) gcc$(VER)
+#CXX=$(CCACHE) g++$(VER)
+#CXX11=$(CCACHE) g++$(VER) #-std=c++11
+#CXX14=$(CCACHE) g++$(VER) #-std=c++14
+#
+#STRIP=-Wl,-S
+#SHLIB_CXXLDFLAGS = $(STRIP) -shared
+#SHLIB_CXX11LDFLAGS = $(STRIP) -shared
+#SHLIB_CXX14LDFLAGS = $(STRIP) -shared
+#SHLIB_FCLDFLAGS = $(STRIP) -shared
+#SHLIB_LDFLAGS = $(STRIP) -shared
+#
+#FC=$(ccache) gfortran
+#F77=$(ccache) gfortran
+#F95=$(ccache) gfortran
+#
+### Works again with 16.10
+##CXX=ccache clang++
+##CXX11=ccache clang++ -std=c++11
+##CXX14=ccache clang++ -std=c++14
+##CC=ccache clang
+##SHLIB_CXXLD=clang
+##CXXFLAGS=-Wall -O3 
+##
+
+
+
