@@ -1,53 +1,99 @@
-" Basic Settings
-"
 
-execute pathogen#infect()
+"""""" remap insert
 
-set backupdir=~/.vim-backups " create a different backup file directory
-set directory=~/.vim-backups
+nnoremap <Tab> <Esc>
+vnoremap <Tab> <Esc>gV
+onoremap <Tab> <Esc>
+cnoremap <Tab> <C-C><Esc>
+inoremap <Tab> <Esc>`^
+inoremap <Leader><Tab> <Tab>
 
-set nocompatible
+""""""""""""""""" Style """""""""""""""""""""""
+
+" colors
 syntax enable
+set background=dark
+"colorscheme solarized
+"colorscheme desert
+let g:solarized_termcolors=256
+colorscheme solarized
+
+" For plugins to load correctly
+filetype plugin indent on
+
+" Security
+set modelines=0
+
+" Show line numbers
 set number
-set hidden " allow hidden buffers
-set hlsearch
-set wildmenu
-set wildmode=longest,list,full
-"set cursorline
-set autochdir
 
+" Show file stats
+set ruler
 
+" Blink cursor on error instead of beeping (grr)
+set visualbell
 
+" Encoding
+set encoding=utf-8
 
-" vundle
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-"Plugin 'scrooloose/nerdtree'
-let vimrplugin_assign = 0
-
-
-" General tabs and indents
+" Whitespace
+set wrap
+set textwidth=79
+set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-filetype plugin indent on
 set expandtab
-"set autoindent
+set noshiftround
 
-" linebreaks and wrapping
-set wrap linebreak nolist
+" Cursor motion
+set scrolloff=3
+set backspace=indent,eol,start
+set matchpairs+=<:> " use % to jump between pairs
+runtime! macros/matchit.vim
 
-" Visual Settings
-set ruler
-set title
-set background=dark
-"set background=light
-"let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-colorscheme solarized
+" Move up/down editor lines
+nnoremap j gj
+nnoremap k gk
 
+" Allow hidden buffers
+set hidden
 
-"putting these last seems to help solve issues (silly Vim).
-filetype off
-filetype on
+" Rendering
+set ttyfast
+
+" Status bar
+set laststatus=2
+
+" Last line
+set showmode
+set showcmd
+
+" Searching
+nnoremap / /\v
+vnoremap / /\v
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+map <leader><space> :let @/=''<cr> " clear search
+
+" Remap help key.
+inoremap <F1> <ESC>:set invfullscreen<CR>a
+nnoremap <F1> :set invfullscreen<CR>
+vnoremap <F1> :set invfullscreen<CR>
+
+" Textmate holdouts
+
+" Formatting
+map <leader>q gqip
+
+" Visualize tabs and newlines
+set listchars=tab:▸\ ,eol:¬
+" Uncomment this to enable by default:
+" set list " To enable by default
+" Or use your leader key + l to toggle on/off
+map <leader>l :set list!<CR> " Toggle tabs and EOL
+
 
