@@ -1,0 +1,69 @@
+## Creating .zprofile May 22 2021 with new Macbook Pro Moi
+## mostly following https://dev.to/lucaskuhn/mac-setup-for-a-developer-in-2020-26ak
+
+# MacPorts Installer addition on 2021-05-22_at_11:59:25: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Alias navigation
+alias m='cd ~/mutationarearelationship/'
+alias mm='cd ~/mutationarearelationship//mar'
+alias s='cd ~/natvar/analysesphenotypeselection/'
+
+# Aliases git
+alias gs='git status'
+alias ga="git add"
+alias gdco='git log --oneline --decorate'
+alias gbra='git branch'
+alias chout='git checkout'
+alias gc='git commit -m'
+alias merrem='git merge remote'
+alias gr="git rm"
+alias gd="git ls-files --deleted -z | xargs -0 git rm"
+#alias grmall ='git rm $(git ls-files --deleted)'
+
+# Alias tmux
+alias sourcetmux='tmux source-file ~/.tmux.conf'
+alias ts="tmux ls"
+alias ta='tmux a -t'
+alias tn='tmux new -s'
+
+# Alias clusters
+alias calc='ssh mexpositoalonso@calc.carnegiescience.edu'
+alias memex='ssh mexpositoalonso@memex.carnegiescience.edu'
+alias moinode='ssh mexpositoalonso@moinode.dpb.carnegiescience.edu'
+alias caltech='ssh mexposit@login.hpc.caltech.edu'
+#alias to mount smbfs
+#alias mountcarnegie="mount_smbfs //mexpositoalonso@homes-su.dpb.carnegiescience.edu/mexpositoalonso ~/mexpositoalonso"
+#alias unmountcarnegie="unmount ~/mexpositoalonso"
+alias mountcarnegie="mount_smbfs //mexpositoalonso@homes-su.dpb.carnegiescience.edu/mexpositoalonso ~/mexpositoalonso"
+alias mountcarnegiedata="mount_smbfs //mexpositoalonso@data-su.dpb.carnegiescience.edu/Shared/Labs/Moi/Everyone ~/safedata"
+alias unmountcarnegie="sudo diskutil unmount force mexpositoalonso/"
+alias unmountcarnegiedata="sudo diskutil unmount force safedata/"
+
+
+# Alias mounting
+
+# Alias for navigation
+alias cdd="cd /Dropbox"
+alias ll="ls -l -a"
+alias llh="ls -lah"
+alias llt="ls -ta"
+alias lld=' ll -d */'
+alias descomp='tar -zcvf'
+
+# Other aliases
+alias rstudio='open -a Rstudio'
+
+# Paths
+PATH=$PATH:~/bin
+PATH=$PATH:/Users/mexpositoalonso/Library/Python/3.8/bin
+
+#Path fortran
+export FC="/opt/homebrew/bin/gfortran"
+# May 22 2023
+
+
